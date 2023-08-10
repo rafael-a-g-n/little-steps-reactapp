@@ -36,7 +36,7 @@ export default function App() {
           </div>
 
           <p className="message">
-            step {step}: {messages[step]}
+            step {step}: {messages[step - 1]}
           </p>
 
           <div className="buttons">
