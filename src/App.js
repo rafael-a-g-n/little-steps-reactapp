@@ -7,15 +7,15 @@ const messages = [
 ];
 
 export default function App() {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
   function handlePrevious() {
-    if (step > 0) setStep((cur) => cur - 1);
+    if (step > 1) setStep((cur) => cur - 1);
   }
 
   function handleNext() {
-    if (step < 2) setStep((cur) => cur + 1);
+    if (step < 3) setStep((cur) => cur + 1);
   }
 
   function handleToggle() {
@@ -30,9 +30,9 @@ export default function App() {
       {isOpen && (
         <div className="steps">
           <div className="numbers">
-            <div className={step >= 0 ? "active" : ""}>1</div>
-            <div className={step >= 1 ? "active" : ""}>2</div>
-            <div className={step >= 2 ? "active" : ""}>3</div>
+            <div className={step >= 1 ? "active" : ""}>1</div>
+            <div className={step >= 2 ? "active" : ""}>2</div>
+            <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
           <p className="message">
